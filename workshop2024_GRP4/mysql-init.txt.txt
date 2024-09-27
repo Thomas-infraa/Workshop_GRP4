@@ -1,0 +1,64 @@
+-- Adminer 4.8.1 MySQL 5.7.11 dump
+
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+DROP DATABASE IF EXISTS `forumbdd`;
+CREATE DATABASE `forumbdd` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `forumbdd`;
+
+DROP TABLE IF EXISTS `post`;
+CREATE TABLE `post` (
+  `idpost` int(11) NOT NULL AUTO_INCREMENT,
+  `namepost` varchar(255) NOT NULL,
+  `authorpost` varchar(100) NOT NULL,
+  `datepost` datetime NOT NULL,
+  PRIMARY KEY (`idpost`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `post` (`idpost`, `namepost`, `authorpost`, `datepost`) VALUES
+(1,	'test',	'Admin',	'2024-09-25 13:38:53'),
+(2,	'Besooin d\'aide',	'Admin',	'2024-09-25 13:39:16'),
+(3,	'HELP',	'Admin',	'2024-09-25 14:38:25'),
+(4,	'AAAAAAAAAAAAAAAAAAAAA',	'Admin',	'2024-09-25 15:16:37');
+
+DROP TABLE IF EXISTS `reponse`;
+CREATE TABLE `reponse` (
+  `idresponse` int(11) NOT NULL AUTO_INCREMENT,
+  `responsecontenet` varchar(2000) NOT NULL,
+  `idauthor` varchar(100) NOT NULL,
+  `datepost` datetime NOT NULL,
+  `idpost` int(11) NOT NULL,
+  PRIMARY KEY (`idresponse`),
+  KEY `idpost` (`idpost`),
+  CONSTRAINT `reponse_ibfk_1` FOREIGN KEY (`idpost`) REFERENCES `post` (`idpost`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `reponse` (`idresponse`, `responsecontenet`, `idauthor`, `datepost`, `idpost`) VALUES
+(1,	'test',	'Admin',	'2024-09-25 13:40:18',	2),
+(2,	'blablablablabla',	'admin2',	'2024-09-25 14:08:45',	2),
+(3,	'blablablablabla',	'admin2',	'2024-09-25 14:38:59',	3),
+(4,	'?',	'admin2',	'2024-09-25 14:39:24',	3),
+(5,	'test',	'Admin',	'2024-09-25 14:40:18',	3),
+(6,	'aaaaaaaaaaaaaaa',	'Admin',	'2024-09-25 15:16:22',	3),
+(7,	'GMAL',	'Admin',	'2024-09-25 15:16:42',	4);
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`email`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `user` (`first_name`, `last_name`, `email`, `password`) VALUES
+('admin2',	'admin2',	'admin2@ecoles-epsi.net',	'ab4f63f9ac65152575886860dde480a1'),
+('admin3',	'admin3',	'admin3@ecoles-epsi.net',	'ab4f63f9ac65152575886860dde480a1'),
+('Admin',	'Admin',	'admin@ecoles-epsi.net',	'ab4f63f9ac65152575886860dde480a1'),
+('test',	'test',	'test@ecoles-epsi.net',	'ab4f63f9ac65152575886860dde480a1');
+
+-- 2024-09-25 13:27:22

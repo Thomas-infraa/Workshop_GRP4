@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Informations de Trafic</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
+        th { background-color: #f2f2f2; position: sticky; top: 0; z-index: 2; }
+        #tableContainer { 
+            width: 100%; 
+            height: 600px; /* Hauteur visible du tableau */
+            overflow: hidden; /* Masquer la barre de défilement */
+        }
+        #scrollingContent {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Informations de Trafic</h1>
+    <div id="tableContainer">
+        <table>
+            <thead>
+                <tr>
+                    <th>Icone</th>
+                    <th>Nom</th>
+                    <th>En Service</th>
+                    <th>Sévérité</th>
+                </tr>
+            </thead>
+            <tbody id="scrollingContent">                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:59?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65f81cc3efe57_A.svg' alt='Tram A' width='30'></a></td>
+                    <td>Tram A</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:61?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65f81c805f048_C.svg' alt='Tram C' width='30'></a></td>
+                    <td>Tram C</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:62?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65f81c4d6e776_D.svg' alt='Tram D' width='30'></a></td>
+                    <td>Tram D</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:01?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f6e653389_1.svg' alt='Lianes 1' width='30'></a></td>
+                    <td>Lianes 1</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:02?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f6f34b4e8_2.svg' alt='Lianes 2' width='30'></a></td>
+                    <td>Lianes 2</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:05?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f70cc1632_5.svg' alt='Lianes 5' width='30'></a></td>
+                    <td>Lianes 5</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:07?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f714eb671_7.svg' alt='Lianes 7' width='30'></a></td>
+                    <td>Lianes 7</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:09?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f729e99c5_9.svg' alt='Lianes 9' width='30'></a></td>
+                    <td>Lianes 9</td>
+                    <td>Oui</td>
+                    <td>Informatif</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:15?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f7352f703_15.svg' alt='Lianes 15' width='30'></a></td>
+                    <td>Lianes 15</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:16?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f73ec5c0b_16.svg' alt='Lianes 16' width='30'></a></td>
+                    <td>Lianes 16</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:20?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8fa25e7ecd_20.svg' alt='Principale 20' width='30'></a></td>
+                    <td>Principale 20</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:23?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8fa3f00841_23.svg' alt='Principale 23' width='30'></a></td>
+                    <td>Principale 23</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:24?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8fa482ef7c_24.svg' alt='Principale 24' width='30'></a></td>
+                    <td>Principale 24</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:25?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8fa52cfdab_25.svg' alt='Principale 25' width='30'></a></td>
+                    <td>Principale 25</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:26?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8fa5a31e72_26.svg' alt='Principale 26' width='30'></a></td>
+                    <td>Principale 26</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:27?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8fa61ab810_27.svg' alt='Principale 27' width='30'></a></td>
+                    <td>Principale 27</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:28?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8fa6b3f454_28.svg' alt='Principale 28' width='30'></a></td>
+                    <td>Principale 28</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:29?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8fa74ef6aa_29.svg' alt='Principale 29' width='30'></a></td>
+                    <td>Principale 29</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:30?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f847b4aa4_30.svg' alt='Locale 30' width='30'></a></td>
+                    <td>Locale 30</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:31?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f75d9aa3f_31.svg' alt='Lianes 31' width='30'></a></td>
+                    <td>Lianes 31</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:32?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f868bf3f5_32.svg' alt='Locale 32' width='30'></a></td>
+                    <td>Locale 32</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:34?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f88239791_34.svg' alt='Locale 34' width='30'></a></td>
+                    <td>Locale 34</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:35?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f776783c8_35.svg' alt='Lianes 35' width='30'></a></td>
+                    <td>Lianes 35</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:38?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f8b447071_38.svg' alt='Locale 38' width='30'></a></td>
+                    <td>Locale 38</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:39?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f7838485b_39.svg' alt='Lianes 39' width='30'></a></td>
+                    <td>Lianes 39</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:51?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f7e1b87e9_51.svg' alt='Directe 51' width='30'></a></td>
+                    <td>Directe 51</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:53?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f7f9a65f4_53.svg' alt='Directe 53' width='30'></a></td>
+                    <td>Directe 53</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:454?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/667bcbfcce356_54.svg' alt='Directe 54' width='30'></a></td>
+                    <td>Directe 54</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:460?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a903d081c40_60.svg' alt='Locale 60' width='30'></a></td>
+                    <td>Locale 60</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:461?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a903e10ec32_61.svg' alt='Locale 61' width='30'></a></td>
+                    <td>Locale 61</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:64?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f8c85738b_64.svg' alt='Locale 64' width='30'></a></td>
+                    <td>Locale 64</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:67?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f8f9ab725_67.svg' alt='Locale 67' width='30'></a></td>
+                    <td>Locale 67</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:70?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f906719ff_70.svg' alt='Locale 70' width='30'></a></td>
+                    <td>Locale 70</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:71?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f9141c957_71.svg' alt='Locale 71' width='30'></a></td>
+                    <td>Locale 71</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:72?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f91d3699c_72.svg' alt='Locale 72' width='30'></a></td>
+                    <td>Locale 72</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:73?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f925c8b54_73.svg' alt='Locale 73' width='30'></a></td>
+                    <td>Locale 73</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:80?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f969cac61_80.svg' alt='Locale 80' width='30'></a></td>
+                    <td>Locale 80</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:81?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f97392220_81.svg' alt='Locale 81' width='30'></a></td>
+                    <td>Locale 81</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:82?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f97c9be6c_82.svg' alt='Locale 82' width='30'></a></td>
+                    <td>Locale 82</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:84?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/66559a1c2f651_84.svg' alt='Locale 84' width='30'></a></td>
+                    <td>Locale 84</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:86?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f9b429aa7_86.svg' alt='Locale 86' width='30'></a></td>
+                    <td>Locale 86</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:87?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f9bd590c2_87.svg' alt='Locale 87' width='30'></a></td>
+                    <td>Locale 87</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:89?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a8f9c6dde67_89.svg' alt='Locale 89' width='30'></a></td>
+                    <td>Locale 89</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:90?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/6682b1308d6cf_90.svg' alt='Locale 90' width='30'></a></td>
+                    <td>Locale 90</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:19?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65bb5d5916b2a_Navettes Arena.svg' alt='Navette Arena' width='30'></a></td>
+                    <td>Navette Arena</td>
+                    <td>Oui</td>
+                    <td>Informatif</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:568?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/6683b22098a6f_65bb5d67ac809_Flexartigues.svg' alt='Flex' Artigues' width='30'></a></td>
+                    <td>Flex' Artigues</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:501?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65bb5ddbc7152_N1.svg' alt='Flex'Night 1' width='30'></a></td>
+                    <td>Flex'Night 1</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:506?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65bb5e0abee68_N6.svg' alt='Flex'Night 6' width='30'></a></td>
+                    <td>Flex'Night 6</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:507?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65bb5e14e44fd_N7.svg' alt='Flex'Night 7' width='30'></a></td>
+                    <td>Flex'Night 7</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:58?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65c2469bf4134_TBNight.svg' alt='TBNight' width='30'></a></td>
+                    <td>TBNight</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:69?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65c245ef9e298_BAT3.svg' alt='BAT3' width='30'></a></td>
+                    <td>BAT3</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:803?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a91c4ac1560_s3.svg' alt='SCODI S03' width='30'></a></td>
+                    <td>SCODI S03</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:804?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a91c55d44c8_s4.svg' alt='SCODI S04' width='30'></a></td>
+                    <td>SCODI S04</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:805?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a91c5ecadd6_s5.svg' alt='SCODI S05' width='30'></a></td>
+                    <td>SCODI S05</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:807?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65a91c68cca86_s7.svg' alt='SCODI S07' width='30'></a></td>
+                    <td>SCODI S07</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:824?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65afbf42145fc_s24.svg' alt='SCODI S24' width='30'></a></td>
+                    <td>SCODI S24</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:826?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65afbf5019d09_s26.svg' alt='SCODI S26' width='30'></a></td>
+                    <td>SCODI S26</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:827?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65afbf5748483_s27.svg' alt='SCODI S27' width='30'></a></td>
+                    <td>SCODI S27</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:828?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65afbf5f3d27e_s28.svg' alt='SCODI S28' width='30'></a></td>
+                    <td>SCODI S28</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:830?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65afbf6f7dd29_s30.svg' alt='SCODI S30' width='30'></a></td>
+                    <td>SCODI S30</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:832?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65afbf7604e47_s32.svg' alt='SCODI S32' width='30'></a></td>
+                    <td>SCODI S32</td>
+                    <td>Oui</td>
+                    <td>Informatif</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:834?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65afbf8700431_s34.svg' alt='SCODI S34' width='30'></a></td>
+                    <td>SCODI S34</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:842?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65afc0c6e3491_s42.svg' alt='SCODI S42' width='30'></a></td>
+                    <td>SCODI S42</td>
+                    <td>Oui</td>
+                    <td>Informatif</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:844?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65afc0d936807_s44.svg' alt='SCODI S44' width='30'></a></td>
+                    <td>SCODI S44</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:845?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65afc0e032b15_s45.svg' alt='SCODI S45' width='30'></a></td>
+                    <td>SCODI S45</td>
+                    <td>Oui</td>
+                    <td>Informatif</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:846?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65afc0e82abac_s46.svg' alt='SCODI S46' width='30'></a></td>
+                    <td>SCODI S46</td>
+                    <td>Oui</td>
+                    <td>Informatif</td>
+                </tr>                <tr>
+                    <td><a href='https://www.infotbm.com/fr/perturbations/ligne/line:BMA:856?time_ref=inProgress&_rsc=q3zpd' target='_blank'><img src='https://ws-maas.infotbm.com/uploads/network/line/images/65afc0315b289_s56.svg' alt='SCODI S56' width='30'></a></td>
+                    <td>SCODI S56</td>
+                    <td>Oui</td>
+                    <td>Perturbé</td>
+                </tr>            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Fonction pour faire défiler le contenu vers le haut
+        function autoScroll() {
+            let tableContainer = document.getElementById('tableContainer');
+            let scrollingContent = document.getElementById('scrollingContent');
+            let scrollSpeed = 1.2;  // Vitesse de défilement en pixels
+
+            // Faire défiler vers le haut de scrollSpeed à intervalles réguliers
+            setInterval(function() {
+                tableContainer.scrollTop += scrollSpeed;
+                // Si on atteint la fin du tableau, revenir en haut
+                if (tableContainer.scrollTop >= scrollingContent.offsetHeight - tableContainer.offsetHeight) {
+                    tableContainer.scrollTop = 0;
+                }
+            }, 15);  // Ajuster l'intervalle pour contrôler la vitesse
+        }
+
+        // Appeler la fonction pour démarrer le défilement
+        autoScroll();
+    </script>
+
+</body>
+</html>
