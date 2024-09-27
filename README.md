@@ -5,7 +5,7 @@
 git clone https://github.com/Thomas-infraa/Workshop_GRP4/
 ```
 
-3. Installation Uwamp pour utiliser Adminer. (https://www.uwamp.com/fr/)
+3. Installer Uwamp pour utiliser Adminer. (https://www.uwamp.com/fr/)
 
 4. Pour créer la BDD, il faut se connecter à Adminer en passant par le localhost avec le compte root root puis importer le fichier scriptSQL_init.
 
